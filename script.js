@@ -700,3 +700,76 @@ $('#form').onsubmit = e => { e.preventDefault(); $('#ok').hidden = false; e.targ
   addEventListener('scroll', onScroll, { passive: true });
   onScroll(); frame();
 })();
+
+
+/* ==========================================================================
+   BRAND GUIDELINES & MATERIALES - PDF.js & FILTROS DE MATRIZ
+   ========================================================================== */
+(function initBrandGuidelines() {
+  // 1. Filtros de la Matriz de Materiales
+  const filterBtns = document.querySelectorAll('.matrix-filter-bar .filter-btn');
+  const tableRows = document.querySelectorAll('#matrix-table tbody tr');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+      tableRows.forEach(row => {
+        if (filter === 'all' || row.dataset.cat === filter) {
+          row.classList.remove('hidden-row');
+        } else {
+          row.classList.add('hidden-row');
+        }
+      });
+    });
+  });
+
+  // 2. Renderizado interactivo de Láminas con PDF.js
+  if (typeof pdfjsLib !== 'undefined') {
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    const pdfUrl = 'assets/materiales.pdf';
+
+    pdfjsLib.getDocument(pdfUrl).promise.then(async pdf => {
+      // Página 1: Sanitarios
+      try {
+        const page1 = await pdf.getPage(1);
+        const canvas1 = document.getElementById('canvas-lamina-1');
+        const load1 = document.getElementById('load-1');
+        if (canvas1) {
+          const viewport1 = page1.getViewport({ scale: 2 });
+          canvas1.width = viewport1.width;
+          canvas1.height = viewport1.height;
+          await page1.render({ canvasContext: canvas1.getContext('2d'), viewport: viewport1 }).promise;
+          if (load1) load1.classList.add('hide');
+        }
+      } catch (e) {
+        console.warn('Error rendering page 1:', e);
+      }
+
+      // Página 2: Moodboard Materiales
+      try {
+        const page2 = await pdf.getPage(2);
+        const canvas2 = document.getElementById('canvas-lamina-2');
+        const load2 = document.getElementById('load-2');
+        if (canvas2) {
+          const viewport2 = page2.getViewport({ scale: 2 });
+          canvas2.width = viewport2.width;
+          canvas2.height = viewport2.height;
+          await page2.render({ canvasContext: canvas2.getContext('2d'), viewport: viewport2 }).promise;
+          if (load2) load2.classList.add('hide');
+        }
+      } catch (e) {
+        console.warn('Error rendering page 2:', e);
+      }
+    }).catch(err => {
+      console.warn('PDF.js loading notice:', err);
+    });
+  }
+
+  // 3. Registrar nuevos elementos .rv con IntersectionObserver si existe
+  if (typeof io !== 'undefined') {
+    document.querySelectorAll('.brandguidelines-section .rv').forEach(el => io.observe(el));
+  }
+})();

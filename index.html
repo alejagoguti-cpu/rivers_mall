@@ -9,14 +9,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="styles.css?v=54">
+<link rel="stylesheet" href="styles.css?v=55">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
 <div id="loader"><img src="assets/logo-mark.svg" alt=""></div>
 
 <header class="nav" id="nav">
   <div class="nav-l">
-    <a class="pill sm" href="#intro"><em>Inicio</em><em>Inicio</em></a>
+    <a class="pill sm" href="#brand-guidelines"><em>Brand & Materiales</em><em>Brand & Materiales</em></a>
     <a class="pill sm" href="#ubicacion"><em>Ubicación</em><em>Ubicación</em></a>
     <a class="pill sm" href="#plano"><em>Niveles & Locales</em><em>Niveles & Locales</em></a>
     <a class="pill sm" href="#contacto"><em>Contacto</em><em>Contacto</em></a>
@@ -25,13 +26,14 @@
     <img src="assets/logo-mark.svg" alt=""><span><b>RIVERS</b><i>MALL</i><small>CÚCUTA</small></span>
   </a>
   <div class="nav-r">
-    <a class="pill sm" href="assets/brochure.pdf" download><em>Descargar brochure</em><em>Descargar brochure</em></a>
+    <a class="pill sm" href="assets/materiales.pdf" download><em>Ficha Materiales PDF</em><em>Ficha Materiales PDF</em></a>
     <a class="pill sm" href="#contacto"><em>Consultar</em><em>Consultar</em></a>
     <button id="burger" aria-label="Menú"><span></span><span></span></button>
   </div>
 </header>
 
 <aside id="drawer">
+  <a href="#brand-guidelines">Brand & Materiales</a>
   <a href="#intro">Rivers Mall</a><a href="#ubicacion">Ubicación</a><a href="#plano">Niveles & Locales</a>
   <a href="#unidades">Unidades</a><a href="#vecinos">Vecinos</a><a href="#contacto">Contacto</a>
   <a href="assets/brochure.pdf" download>Descargar brochure</a>
@@ -45,11 +47,330 @@
     <h1 class="load" style="--d:.4s">Rivers Mall<br>Cúcuta</h1>
     <p class="sub load" style="--d:.6s">El nuevo destino de comercio, ocio y servicios de la ciudad. Locales disponibles para marcas que quieren crecer.</p>
     <div class="load" style="--d:.8s">
+      <a class="pill ghost" href="#brand-guidelines"><em>Brand & Materiales</em><em>Brand & Materiales</em></a>
       <a class="pill ghost" href="#plano"><em>Ver locales</em><em>Ver locales</em></a>
       <a class="pill ghost" href="assets/brochure.pdf" download><em>Descargar brochure</em><em>Descargar brochure</em></a>
     </div>
   </div>
   <div class="credit load" style="--d:1.1s"><span>Realizado por</span><img src="assets/a7-mark.svg" alt=""><b>A7 Arquitectos</b></div>
+</section>
+
+
+<!-- ==============================================
+     BRAND GUIDELINES, MATERIALES & MATRIZ TÉCNICA
+=============================================== -->
+<section class="brandguidelines-section" id="brand-guidelines">
+  <div class="bg-container">
+    
+    <!-- ENCABEZADO BRAND GUIDELINE -->
+    <header class="bg-head rv">
+      <span class="bg-badge">Manual de Identidad & Arquitectura</span>
+      <h2 class="serif">Rivers Mall · Brand Guidelines</h2>
+      <p class="lead">Guía integral de identidad visual, directrices de diseño y especificaciones técnicas de materiales y equipamiento institucional para el proyecto comercial Rivers Mall Cúcuta.</p>
+    </header>
+
+    <!-- BLOQUE 1: LOGOTIPO & IDENTIDAD DE MARCA -->
+    <div class="brand-identity-card rv" style="--d:.1s">
+      <div class="brand-logo-showcase">
+        <div class="brand-logo-main">
+          <img src="assets/logo-mark.svg" alt="Rivers Mall Monograma" class="brand-monogram">
+          <div class="brand-nametag">
+            <span class="brand-name-bold">RIVERS</span>
+            <span class="brand-name-light">MALL</span>
+            <span class="brand-city">CÚCUTA</span>
+          </div>
+        </div>
+        <div class="brand-authorship">
+          <small>DISEÑO & ARQUITECTURA</small>
+          <div class="author-badge">
+            <img src="assets/a7-mark.svg" alt="A7 Arquitectos">
+            <strong>A7 Arquitectos</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="brand-specs-grid">
+        <div class="brand-spec-item">
+          <h4>Concepto Rector</h4>
+          <p>Identidad contemporánea y biofílica inspirada en la dinámica fluvial y la luz de la región. Combina la sobriedad del comercio premium con materiales de textura natural, alta resistencia institucional y tecnología de bajo impacto ambiental.</p>
+        </div>
+        <div class="brand-spec-item">
+          <h4>Tipografía Institucional</h4>
+          <div class="font-samples">
+            <div class="font-sample">
+              <strong>Montserrat</strong>
+              <span>Titulares geométricos, señalética y jerarquía técnica</span>
+            </div>
+            <div class="font-sample">
+              <em>Cormorant Garamond</em>
+              <span>Estilo editorial, elegancia y acentos narrativos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALETA DE COLOR -->
+      <div class="brand-palette-wrap">
+        <h4>Paleta Cromática Oficial</h4>
+        <div class="palette-swatches">
+          <div class="swatch" style="--c:#3b76a8">
+            <div class="swatch-color"></div>
+            <strong>Rivers Blue</strong>
+            <code>#3B76A8</code>
+            <small>Identidad / Agua</small>
+          </div>
+          <div class="swatch" style="--c:#2f363c">
+            <div class="swatch-color"></div>
+            <strong>Dark Slate</strong>
+            <code>#2F363C</code>
+            <small>Sobriedad / Contraste</small>
+          </div>
+          <div class="swatch" style="--c:#2f6a9a">
+            <div class="swatch-color"></div>
+            <strong>Sage River</strong>
+            <code>#2F6A9A</code>
+            <small>Acento Primario</small>
+          </div>
+          <div class="swatch" style="--c:#9d7a54">
+            <div class="swatch-color"></div>
+            <strong>Warm Oak</strong>
+            <code>#9D7A54</code>
+            <small>Madera / Calidez</small>
+          </div>
+          <div class="swatch" style="--c:#1f2421">
+            <div class="swatch-color"></div>
+            <strong>Antracita</strong>
+            <code>#1F2421</code>
+            <small>Relieve Grafito</small>
+          </div>
+          <div class="swatch" style="--c:#f8f9fa">
+            <div class="swatch-color" style="border:1px solid #dbe2e7"></div>
+            <strong>Pure White</strong>
+            <code>#F8F9FA</code>
+            <small>Luz / Sanitarios</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 2: MATERIALES & LÁMINAS VISUALES -->
+    <div class="materials-showcase-wrap rv" style="--d:.2s">
+      <div class="section-subhead">
+        <p class="eyebrow">Especificaciones Técnicas</p>
+        <h3 class="serif">Materiales & Equipamiento Institucional</h3>
+        <p class="lead sm">Visualización de las láminas oficiales de selección técnica de acabados, revestimientos y dotación hidrosanitaria.</p>
+        <div class="doc-actions">
+          <a class="pill ink sm" href="assets/materiales.pdf" download>
+            <em>Descargar Ficha Técnica PDF</em>
+            <em>Descargar Ficha Técnica PDF</em>
+          </a>
+        </div>
+      </div>
+
+      <!-- VISOR DE LÁMINAS TÉCNICAS -->
+      <div class="laminas-grid">
+        <!-- Lámina 1: Sanitarios -->
+        <div class="lamina-card">
+          <div class="lamina-header">
+            <span class="lamina-tag">Lámina 01</span>
+            <h4>Aparatos Sanitarios, Grifería & Accesorios PMR</h4>
+          </div>
+          <div class="lamina-canvas-wrap" id="wrap-lamina-1">
+            <canvas id="canvas-lamina-1" class="pdf-canvas" aria-label="Lámina 1 de Sanitarios"></canvas>
+            <div class="canvas-loading" id="load-1">Cargando Lámina 1...</div>
+          </div>
+          <div class="lamina-details">
+            <ul class="lamina-features">
+              <li><strong>Inodoro institucional:</strong> Taza institucional de alta resistencia con fluxómetro empotrado y placa pulsadora cromada.</li>
+              <li><strong>Orinal contemporáneo:</strong> Cerámica vitrificada antibacterial suspendida de bajo consumo de agua.</li>
+              <li><strong>Lavamanos bowl:</strong> Losa cerámica blanca pulida de sobreponer con grifería monomando de caño recto.</li>
+              <li><strong>Higiene & Tecnología:</strong> Secador de manos vertical de alta velocidad Dyson Airblade y dispensador cilíndrico en acero inoxidable.</li>
+              <li><strong>Accesibilidad Universal (PMR):</strong> Barra de seguridad tubular reforzada en acero inoxidable AISI 304 satinado.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Lámina 2: Moodboard de Materiales -->
+        <div class="lamina-card">
+          <div class="lamina-header">
+            <span class="lamina-tag">Lámina 02</span>
+            <h4>Moodboard de Acabados Arquitectónicos & Iluminación</h4>
+          </div>
+          <div class="lamina-canvas-wrap" id="wrap-lamina-2">
+            <canvas id="canvas-lamina-2" class="pdf-canvas" aria-label="Lámina 2 de Materiales"></canvas>
+            <div class="canvas-loading" id="load-2">Cargando Lámina 2...</div>
+          </div>
+          <div class="lamina-details">
+            <ul class="lamina-features">
+              <li><strong>Porcelanato base:</strong> Baldosa gris cemento claro rectificada mate para alto tránsito en pisos y muros.</li>
+              <li><strong>Mosaico vítreo esmeralda:</strong> Teselas brillantes en tonalidades verde bosque para muros de acento en zonas húmedas.</li>
+              <li><strong>Panel alistonado:</strong> Revestimiento acanalado vertical tipo palillería en roble natural claro.</li>
+              <li><strong>Piso tipo madera:</strong> Tablón veteado en roble/nogal cálido para circulaciones y áreas de confort.</li>
+              <li><strong>Mosaico damero & cerámica grafito:</strong> Damero pétreo mármol crema y friso cerámico estriado horizontal antracita.</li>
+              <li><strong>Iluminación:</strong> Downlight LED circular empotrable con marco blanco y difusor translúcido.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BLOQUE 3: MATRIZ DE MATERIALES -->
+    <div class="materials-matrix-wrap rv" style="--d:.3s">
+      <div class="section-subhead">
+        <p class="eyebrow">Tabla de Especificaciones</p>
+        <h3 class="serif">Matriz Técnica de Materiales</h3>
+        <p class="lead sm">Resumen codificado con especificaciones de fabricación, acabados y zonas de aplicación del proyecto.</p>
+      </div>
+
+      <!-- Filtros interactivos -->
+      <div class="matrix-filter-bar">
+        <button class="filter-btn active" data-filter="all">Todos (15)</button>
+        <button class="filter-btn" data-filter="revestimiento">Revestimientos & Pisos</button>
+        <button class="filter-btn" data-filter="sanitario">Aparatos Sanitarios</button>
+        <button class="filter-btn" data-filter="griferia-accesorio">Grifería & Accesorios</button>
+        <button class="filter-btn" data-filter="iluminacion">Iluminación</button>
+      </div>
+
+      <!-- Tabla responsiva -->
+      <div class="table-responsive">
+        <table class="matrix-table" id="matrix-table">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Categoría</th>
+              <th>Elemento / Material</th>
+              <th>Acabado / Color</th>
+              <th>Especificación Técnica</th>
+              <th>Aplicación en Proyecto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-01</span></td>
+              <td><span class="cat-pill">Piso / Muro Base</span></td>
+              <td><strong>Porcelanato Rectificado</strong></td>
+              <td>Gris cálido cementicio / Mate</td>
+              <td>Porcelánico esmaltado rectificado alto tráfico, baja absorción de humedad</td>
+              <td>Pisos generales, baterías de baños y muros base</td>
+            </tr>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-02</span></td>
+              <td><span class="cat-pill">Muro de Acento</span></td>
+              <td><strong>Mosaico Vítreo (Gresite)</strong></td>
+              <td>Verde esmeralda destonificado / Brillante</td>
+              <td>Mosaico vítreo prensado sobre malla, resistente a químicos y humedad</td>
+              <td>Muros de acento en zonas de vanitorios y cabinas</td>
+            </tr>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-03</span></td>
+              <td><span class="cat-pill">Muro de Acento</span></td>
+              <td><strong>Cerámica Ranurada Lineal</strong></td>
+              <td>Gris antracita / Grafito mate</td>
+              <td>Revestimiento arquitectónico estriado en pasta blanca</td>
+              <td>Fondos de vanitorios y muros focales</td>
+            </tr>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-04</span></td>
+              <td><span class="cat-pill">Carpintería / Muro</span></td>
+              <td><strong>Panel Alistonado Vertical</strong></td>
+              <td>Roble claro natural / Textura madera</td>
+              <td>Palillería acanalada sobre sustrato hidrófugo con sellado UV</td>
+              <td>Mamparas divisorias, frentes y transiciones</td>
+            </tr>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-05</span></td>
+              <td><span class="cat-pill">Pavimento</span></td>
+              <td><strong>Tablón Tipo Madera</strong></td>
+              <td>Nogal / Roble ahumado veteado</td>
+              <td>Piso vinílico SPC alto tráfico o porcelánico maderado</td>
+              <td>Pasillos principales, áreas comunes y zonas secas</td>
+            </tr>
+            <tr data-cat="revestimiento">
+              <td><span class="badge-code">MAT-06</span></td>
+              <td><span class="cat-pill">Muro Decorativo</span></td>
+              <td><strong>Mosaico en Damero Pétreo</strong></td>
+              <td>Mármol crema y beige / Mate</td>
+              <td>Gres rectificado en patrón ajedrezado geométrico</td>
+              <td>Cenefas decorativas y muros de remate</td>
+            </tr>
+            <tr data-cat="iluminacion">
+              <td><span class="badge-code">MAT-07</span></td>
+              <td><span class="cat-pill">Iluminación</span></td>
+              <td><strong>Downlight LED Empotrable</strong></td>
+              <td>Aro blanco / 3000K-4000K</td>
+              <td>Cuerpo de aluminio inyectado, difusor opalino antirreflejo IP44</td>
+              <td>Cielo raso en baterías de baños y circulaciones</td>
+            </tr>
+            <tr data-cat="sanitario">
+              <td><span class="badge-code">SAN-01</span></td>
+              <td><span class="cat-pill">Aparato Sanitario</span></td>
+              <td><strong>Inodoro Institucional</strong></td>
+              <td>Blanco vitrificado brillante</td>
+              <td>Losa vitrificada de alta densidad, sifón esmaltado, aro alargado</td>
+              <td>Cabinas sanitarias generales y cabina PMR</td>
+            </tr>
+            <tr data-cat="sanitario">
+              <td><span class="badge-code">SAN-02</span></td>
+              <td><span class="cat-pill">Aparato Sanitario</span></td>
+              <td><strong>Orinal Institucional</strong></td>
+              <td>Blanco vitrificado brillante</td>
+              <td>Mingitorio mural suspendido con trampa integrada, bajo consumo</td>
+              <td>Batería de sanitarios masculinos</td>
+            </tr>
+            <tr data-cat="sanitario">
+              <td><span class="badge-code">SAN-03</span></td>
+              <td><span class="cat-pill">Aparato Sanitario</span></td>
+              <td><strong>Lavamanos Bowl Sobreponer</strong></td>
+              <td>Blanco pulido</td>
+              <td>Losa cerámica semiesférica sin rebose para mesón corrido</td>
+              <td>Mesón principal de vanitorios</td>
+            </tr>
+            <tr data-cat="griferia-accesorio">
+              <td><span class="badge-code">GRI-01</span></td>
+              <td><span class="cat-pill">Grifería</span></td>
+              <td><strong>Grifería de Lavamanos</strong></td>
+              <td>Cromo pulido / Acero inox</td>
+              <td>Cuerpo en latón cromado con cartucho cerámico y aireador ecológico</td>
+              <td>Mesones de lavamanos</td>
+            </tr>
+            <tr data-cat="griferia-accesorio">
+              <td><span class="badge-code">ACC-01</span></td>
+              <td><span class="cat-pill">Descarga</span></td>
+              <td><strong>Pulsador Fluxómetro Embutido</strong></td>
+              <td>Cromo pulido brillante</td>
+              <td>Placa frontal con actuador dual/simple para descarga embutida</td>
+              <td>Muro técnico de inodoros</td>
+            </tr>
+            <tr data-cat="griferia-accesorio">
+              <td><span class="badge-code">ACC-02</span></td>
+              <td><span class="cat-pill">Higiene</span></td>
+              <td><strong>Dispensador de Jabón Vertical</strong></td>
+              <td>Acero inoxidable AISI 304 satinado</td>
+              <td>Depósito cilíndrico recargable con válvula antigoteo y visor</td>
+              <td>Muros adyacentes a lavamanos</td>
+            </tr>
+            <tr data-cat="griferia-accesorio">
+              <td><span class="badge-code">ACC-03</span></td>
+              <td><span class="cat-pill">Equipamiento</span></td>
+              <td><strong>Secador de Manos Dyson Airblade</strong></td>
+              <td>Aluminio / Inox satinado</td>
+              <td>Motor digital de alta velocidad, filtro HEPA y secado ultra rápido</td>
+              <td>Muros de circulación y salida de baños</td>
+            </tr>
+            <tr data-cat="griferia-accesorio">
+              <td><span class="badge-code">ACC-04</span></td>
+              <td><span class="cat-pill">Accesibilidad PMR</span></td>
+              <td><strong>Barra de Apoyo Institucional</strong></td>
+              <td>Acero inoxidable AISI 304 satinado</td>
+              <td>Tubo Ø 1-1/4" con anclaje reforzado para personas con movilidad reducida</td>
+              <td>Cabina de baño accesible (PMR)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </section>
 
 <section class="sage" id="intro">

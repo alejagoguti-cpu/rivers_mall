@@ -1191,3 +1191,492 @@ button.uc:hover .uc-btn-hint {
     font-size: 10px;
   }
 }
+
+
+/* ==========================================================================
+   BRAND GUIDELINES, MATERIALES & MATRIZ TÉCNICA
+   ========================================================================== */
+.brandguidelines-section {
+  position: relative;
+  background: #fbfcfd;
+  color: #1a1e21;
+  padding: 100px 6vw 110px;
+  border-bottom: 1px solid #e5e9ec;
+}
+.bg-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.bg-head {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.bg-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(59, 118, 168, 0.1);
+  color: #2f6a9a;
+  border: 1px solid rgba(59, 118, 168, 0.25);
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.bg-head h2 {
+  font-size: clamp(34px, 4.8vw, 62px);
+  color: #1f2421;
+  letter-spacing: .02em;
+  margin-bottom: 16px;
+}
+.bg-head .lead {
+  color: #55626a;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 820px;
+}
+
+/* 1. BRAND IDENTITY CARD */
+.brand-identity-card {
+  background: #ffffff;
+  border: 1px solid #e2e7eb;
+  border-radius: 16px;
+  padding: 44px 48px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.04);
+  margin-bottom: 80px;
+}
+.brand-logo-showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 34px;
+  border-bottom: 1px solid #edf1f4;
+  margin-bottom: 34px;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.brand-logo-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.brand-monogram {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(47, 54, 60, 0.12));
+}
+.brand-nametag {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.brand-name-bold {
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  letter-spacing: .08em;
+  color: #2f363c;
+}
+.brand-name-light {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: .5em;
+  color: #3b76a8;
+  margin-top: 4px;
+}
+.brand-city {
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: .45em;
+  color: #7a8892;
+  margin-top: 5px;
+}
+.brand-authorship {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+.brand-authorship small {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #8b97a0;
+  font-weight: 600;
+}
+.author-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f6f8;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid #e1e6eb;
+}
+.author-badge img {
+  height: 20px;
+  width: auto;
+}
+.author-badge strong {
+  font-size: 13px;
+  color: #2f363c;
+  letter-spacing: .02em;
+}
+
+.brand-specs-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  margin-bottom: 36px;
+}
+.brand-spec-item h4 {
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #2f363c;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.brand-spec-item p {
+  color: #5d6b75;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.font-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.font-sample {
+  display: flex;
+  flex-direction: column;
+  background: #f8fafb;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border-left: 3px solid #3b76a8;
+}
+.font-sample strong {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  color: #1f2421;
+}
+.font-sample em {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  color: #1f2421;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+.font-sample span {
+  font-size: 11px;
+  color: #7b8893;
+  margin-top: 2px;
+}
+
+/* PALETA CROMÁTICA */
+.brand-palette-wrap h4 {
+  font-size: 13px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #2f363c;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.palette-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+.swatch {
+  background: #f9fafb;
+  border: 1px solid #e7ecf0;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.swatch:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.swatch-color {
+  height: 48px;
+  border-radius: 8px;
+  background: var(--c);
+  margin-bottom: 12px;
+}
+.swatch strong {
+  font-size: 13px;
+  color: #1f2421;
+}
+.swatch code {
+  font-size: 11px;
+  font-family: monospace;
+  color: #3b76a8;
+  font-weight: 600;
+  margin: 2px 0 4px;
+}
+.swatch small {
+  font-size: 11px;
+  color: #83919b;
+}
+
+/* 2. LÁMINAS VISUALES DE MATERIALES */
+.materials-showcase-wrap {
+  margin-bottom: 80px;
+}
+.section-subhead {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-subhead h3 {
+  font-size: clamp(28px, 3.8vw, 48px);
+  color: #1f2421;
+  margin: 10px 0 14px;
+}
+.doc-actions {
+  margin-top: 18px;
+}
+.laminas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+.lamina-card {
+  background: #ffffff;
+  border: 1px solid #e1e6eb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.lamina-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+.lamina-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #edf1f4;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.lamina-tag {
+  background: #2f363c;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  padding: 5px 12px;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+.lamina-header h4 {
+  font-size: 15px;
+  color: #1f2421;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.lamina-canvas-wrap {
+  position: relative;
+  min-height: 380px;
+  background: #f5f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+.pdf-canvas {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.canvas-loading {
+  position: absolute;
+  color: #8b97a0;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.canvas-loading.hide {
+  display: none;
+}
+.lamina-details {
+  padding: 24px;
+  background: #ffffff;
+  flex-grow: 1;
+}
+.lamina-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lamina-features li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #55626a;
+  line-height: 1.55;
+}
+.lamina-features li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3b76a8;
+}
+.lamina-features li strong {
+  color: #1f2421;
+  font-weight: 600;
+}
+
+/* 3. MATRIZ TÉCNICA DE MATERIALES */
+.materials-matrix-wrap {
+  margin-top: 40px;
+}
+.matrix-filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.filter-btn {
+  background: #ffffff;
+  border: 1px solid #dbe2e7;
+  color: #4f5d66;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: all .25s var(--ease);
+}
+.filter-btn:hover {
+  background: #f0f4f7;
+  border-color: #3b76a8;
+  color: #1f2421;
+}
+.filter-btn.active {
+  background: #2f363c;
+  color: #ffffff;
+  border-color: #2f363c;
+  box-shadow: 0 4px 14px rgba(47, 54, 60, 0.2);
+}
+
+.table-responsive {
+  background: #ffffff;
+  border: 1px solid #e1e6eb;
+  border-radius: 16px;
+  overflow-x: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+  min-width: 900px;
+}
+.matrix-table thead {
+  background: #2f363c;
+  color: #ffffff;
+}
+.matrix-table th {
+  padding: 18px 20px;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid #24292e;
+}
+.matrix-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #edf1f4;
+  color: #4b5861;
+  vertical-align: middle;
+  line-height: 1.5;
+}
+.matrix-table tbody tr {
+  transition: background-color .2s ease;
+}
+.matrix-table tbody tr:hover {
+  background: #f8fafc;
+}
+.matrix-table tbody tr.hidden-row {
+  display: none;
+}
+.badge-code {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #edf4fa;
+  color: #2f6a9a;
+  border-radius: 6px;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 12px;
+  border: 1px solid #d4e4f2;
+}
+.cat-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f1f4f6;
+  color: #55636c;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .laminas-grid {
+    grid-template-columns: 1fr;
+  }
+  .brand-specs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .brandguidelines-section {
+    padding: 70px 5vw 80px;
+  }
+  .brand-identity-card {
+    padding: 28px 22px;
+  }
+  .brand-logo-showcase {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .brand-authorship {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .brand-name-bold {
+    font-size: 26px;
+  }
+  .palette-swatches {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
